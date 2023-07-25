@@ -1,0 +1,56 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+<br><br><br>
+<body style="background: rgb(181,176,178);
+background: linear-gradient(90deg, rgb(123, 121, 122) 0%, rgba(222,219,220,1) 38%, rgba(240,238,239,1) 55%);">
+<main class="container">
+    <!-- Message Area -->
+    <% if(messages.length > 0) {%>
+        <div class="alert alert-danger">
+            <%= messages %>
+        </div>
+    <% } %>
+    <div class="row">
+        <div class="offset-md-4 col-md-4 text-white">
+            <div class="login-form-wrapper" style="background-color: white; box-shadow: 12px 12px 4px rgba(0, 0, 0, 0.2); color: black;padding: 10px 10px 10px 10px; height: 500px; width: 400px;"> <!-- Added border and box-shadow style -->
+                <h1> Login</h1>
+                <img src="Assets/images/039b004617d1ef43cf1769aae45d6ea2.png" alt="Logo" class="logo" height="170" width="200" style="margin-left: 80px;">
+                <form method="POST" autocomplete="off">
+                    <fieldset class="form-group">
+                        <label for="username">Username: </label>
+                        <input type="text" class="form-control"
+                        name="username" placeholder="Enter username"
+                        id="username" required autofocus>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <label for="password">Password: </label>
+                        <input type="password" class="form-control"
+                        name="password" placeholder="Enter password"
+                        id="password" required>
+                        Don't have an account ?
+                        <a href="/register" style="color: green;">Register Here</a>
+                    </fieldset>
+
+                    <fieldset class="form-group text-right">
+                        <input type="submit" class="btn btn-success" value="Login">
+                        <a href="/">
+                            <input type="button" class="btn btn-warning" value="Cancel">
+                        </a>
+                    </fieldset>
+                </form>
+            </div> <!-- Closing div wrapper -->
+        </div>
+    </div>
+
+</main>
+</body>
+<br>
+<br>
+<br>
+<br><br><br><br><br>
+<br><br><br><br>
+<%- include ../partials/bottom_nav.ejs %>
+
+<%- include ../partials/footer.ejs %>

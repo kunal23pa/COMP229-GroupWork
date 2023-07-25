@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include partials/header %>
+    <header>
+        <%- include partials/main_nav %>
+    </header>
+    <style>
+/* custom css goes here */
+/* Custom CSS goes here */
+body {
+    padding-bottom: 70px;
+    }
+  
+  /* Custom CSS goes here */
+  body {
+    padding-bottom: 70px;
+    }
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Header styles */
+    header {
+      position: fixed;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      width: 100%;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      margin-left: 15%;
+    }
+    
+    ul {
+      list-style-type: none;
+    }
+    
+    ul li {
+      display: inline;
+      margin-left: 20px;
+    }
+    
+    ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .hero {
+      margin-top: 50px;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    
+    .hero p {
+      font-size: 18px;
+      color: #888;
+    }
+    
+    /* Main section styles */
+    .features {
+      display: flex;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 50px;
+    }
+    
+    .table-responsive{
+      width:250%;
+      align-items: center;
+    }
+  
+    .form{
+      width: 250%;
+      align-items: center;
+    }
+  
+    .feature {
+      width: 300px;
+      margin: 20px;
+    }
+    
+    .feature img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    
+    .feature h3 {
+      margin: 10px 0;
+      font-size: 24px;
+    }
+    
+    .feature p {
+      color: #555;
+    }
+    
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+    }
+    .create-button{
+      display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    }
+  
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .form {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    
+    input.form-control {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      width: 100%;
+    }
+  
+    input.form-control:focus {
+      outline: none;
+      border-color: #6c757d;
+      box-shadow: 0 0 8px rgba(108, 117, 125, 0.5);
+    }
+    
+    .btn-primary {
+      background-color: #f4511e;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      opacity: 0.6;
+      transition: 0.3s;
+    }
+    
+    .btn-warning {
+      background-color: #f4511e;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 16px;
+      margin: 4px 2px;
+      opacity: 0.6;
+      transition: 0.3s;
+    }
+    
+    .btn-primary:hover,
+    .btn-warning:hover {
+      opacity: 1;
+    }
+    
+    </style>
+   <!-- MAIN CONTENT -->
+   <main>
+    <br><br><br><br>
+    <section class="features">
+      <div class="feature">
+        <img src="https://th.bing.com/th/id/R.efa6760b4d25d48d0bb8991f69252e7d?rik=BrNZlEXAwXreeg&riu=http%3a%2f%2fst.houzz.com%2fsimgs%2fc1f1f35c01181a60_4-4118%2ftraditional-living-room.jpg&ehk=b%2bvKXLiVsiMIqHJ7LgLmAPW6yD7Ose73uUuT0RnQcD4%3d&risl=&pid=ImgRaw&r=0" alt="Feature 1">
+        <h3>Exquisite Interiors</h3>
+        <p>Discover homes with stunning interior designs that provide luxury and comfort.</p>
+      </div>
+      <div class="feature">
+        <img src="https://th.bing.com/th/id/R.200bd2bb1f01f70a951a4767ccfc4019?rik=pgAD%2fuSGj%2fDMiQ&riu=http%3a%2f%2fwww.architectureartdesigns.com%2fwp-content%2fuploads%2f2016%2f10%2f15-Breathtaking-Rustic-Balcony-Designs-With-Killer-Views-4.jpg&ehk=koFJ3WZOpU6ZM3dRqHKTiFRUPgCnDoqTfZuHmELkhlM%3d&risl=&pid=ImgRaw&r=0" alt="Feature 2">
+        <h3>Breathtaking Views</h3>
+        <p>Experience panoramic views of nature, cityscapes, or beautiful waterfronts.</p>
+      </div>
+      <div class="feature">
+        <img src="https://www.tripsavvy.com/thmb/AsP4bvE_JnGgxmUv0n52nkfndB4=/1280x853/filters:fill(auto,1)/2481112503_df3d8961e9_o-56a391723df78cf7727dfcd3.jpg" alt="Feature 3">
+        <h3>Resort-Style Amenities</h3>
+        <p>Enjoy a range of amenities including pools, fitness centers, and recreational areas.</p>
+      </div>
+    </section>
+  </main>
+    <footer class="footer mt-auto py-2 fixed-bottom" style="background-color:rgb(52,58,64)">
+        <%- include partials/bottom_nav.ejs %>  
+
+        <%- include partials/footer%>
+    </footer>
+
+</html>
+
+
+
+
+
+
