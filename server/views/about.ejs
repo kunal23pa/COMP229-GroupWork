@@ -5,7 +5,169 @@
      <header>
           <%- include partials/main_nav%>
      </header>
+     <style>
+        /* Sample CSS for illustration purposes. Customize as needed */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0ecec;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            background-color: #5e81b9;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+           
+        }
+
+        main {
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .team-member .info {
+            flex: 1;
+        }
+
+        .team-member h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #336699; /* Highlight team member names with a specific color */
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .about-image {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow effect to the image */
+        }
+
+        .mission-section {
+            background-color: #f7f4f4; /* Use a light background color for the mission section */
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+            border: 1px solid rgb(201, 199, 199);
+        }
+
+        .why-choose-section {
+            margin-bottom: 40px;
+            font-size: small;
+        }
+
+        .why-choose-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .why-choose-section li {
+            font-size: 17px;
+            margin-bottom: 10px;
+            padding-left: 30px; /* Add some left padding to create space for the bullet point */
+    line-height: 1.5; 
+            position: relative;
+        }
+
+        .why-choose-section li:before {
+            content: '\2022'; /* Use a bullet point (•) as the list item marker */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #336699; /* Set the color of the bullet point */
+    font-size: 40px; /* Increase the font size of the bullet point */
+    vertical-align: top; 
+        }
+        .footer{
+ color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Sheternet</h1>
+        <p>Your go-to platform for finding your dream home!</p>
+    </header>
+
+    <main>
+        <div class="mission-section">
+            <h1>Our Mission</h1>
+            <p>We are passionate about connecting people with their ideal homes. Our mission is to simplify the process of finding a perfect home by providing a user-friendly platform that offers a wide range of listings.</p>
+        </div>
+
+        <div class="why-choose-section">
+            <h1>Why Choose Sheternet?</h1>
+            <ul>
+                <li>Extensive Database: We have a vast collection of homes, apartments, condos, and more.</li>
+                <li>User-Friendly Interface: Our website is designed to be intuitive and easy to navigate.</li>
+                <li>Expert Assistance: Our team of real estate experts is always ready to help you with any queries.</li>
+                <li>Trustworthy: We ensure that all listings on our website are verified and legitimate.</li>
+                <li>Customized Searches: Filter your search based on your preferences to find the perfect match.</li>
+            </ul>
+        </div>
+
+        <h1>Meet the Team</h1>
+        <div class="team-member">
+            <img src="https://clipground.com/images/businesswoman-clipart-with-the-work-boss-7.jpg" alt="Team Member 1">
+            <div class="info">
+                <h3>John Doe</h3>
+                <p>Co-Founder & CEO</p>
+                <p>John is passionate about real estate and technology, driving the vision of Sheternet.</p>
+            </div>
+        </div>
+
+        <div class="team-member">
+            <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/37732060/original/dc46579a0bb112dbcc9b3841677739006613a03f/draw-a-professional-cartoon-portrait.jpg" alt="Team Member 2">
+            <div class="info">
+                <h3>Jane Smith</h3>
+                <p>Co-Founder & CTO</p>
+                <p>Jane leads the technical team, ensuring an efficient and seamless user experience.</p>
+            </div>
+        </div>
+
+        <div class="about-image">
+            <img src="https://th.bing.com/th/id/OIP.dqEGEMdIxsyXtJdm_VwIugAAAA?pid=ImgDet&rs=1" alt="Sheternet Office">
+        </div>
+
+        <!-- Add additional sections and content as needed -->
+
+    </main>
      <footer class="footer mt-auto py-2 fixed-bottom" style="background-color:rgb(52,58,64)">
           <%- include partials/bottom_nav.ejs %>  
         <%- include partials/footer%>

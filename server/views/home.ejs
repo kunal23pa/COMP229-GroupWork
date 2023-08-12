@@ -30,7 +30,7 @@ body {
     /* Header styles */
     header {
       position: fixed;
-      background-color: #333;
+      background-color: #5e81b9;
       color: #fff;
       padding: 20px;
       width: 100%;
@@ -38,7 +38,7 @@ body {
     
     nav {
       display: flex;
-      justify-content: space-between;
+      
       align-items: center;
     }
     
@@ -54,7 +54,7 @@ body {
     
     ul li {
       display: inline;
-      margin-left: 20px;
+
     }
     
     ul li a {
@@ -121,9 +121,9 @@ body {
     footer {
       background-color: #333;
       color: #fff;
-      padding: 20px;
-      text-align: center;
-      position: fixed;
+      
+      
+     
       width: 100%;
     }
     .create-button{
@@ -207,7 +207,51 @@ body {
     .btn-warning:hover {
       opacity: 1;
     }
-    
+    .search-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .search-form input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-form button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #336699;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .featured-properties {
+            width: 50%;
+            overflow: hidden;
+            margin-bottom: 30px;
+            margin-left: 25%;
+            border: 1px solid #336699;
+            padding: 20px 20px 20px 20px;
+          
+        }
+
+        .property-slide {
+            width: 100%;
+            display: none;
+        }
+
+        .property-slide img {
+            width: 100%;
+            max-height: 300px; /* Set the maximum height for the carousel images */
+            object-fit: cover;
+        }
     </style>
    <!-- MAIN CONTENT -->
    <main>
@@ -229,7 +273,47 @@ body {
         <p>Enjoy a range of amenities including pools, fitness centers, and recreational areas.</p>
       </div>
     </section>
+    <div class="search-form">
+      <input type="text" placeholder="Enter a location, e.g., city or ZIP code">
+      <button onclick="searchProperties()">Search</button>
+  </div>
+
+  <div class="featured-properties">
+      <div class="property-slide">
+          <img src="https://ww1.prweb.com/prfiles/2012/01/17/9114536/Estuary%20Grey%20Oaks%20Home.jpg" alt="Property 1" >
+      </div>
+      <div class="property-slide">
+          <img src="https://th.bing.com/th/id/R.e5163ca9b24b588e4b8b763807dba884?rik=VT7p94qdjUm3hg&riu=http%3a%2f%2fwww.idesignarch.com%2fwp-content%2fuploads%2fAttractive-Prefab-Home-Toby-Long_3.jpg&ehk=TG7p4wXkWbYa5XV2oGdRT98k%2bujG%2fofu6yOCIorhfHg%3d&risl=&pid=ImgRaw&r=0" alt="Property 2">
+      </div>
+      <!-- Add more property slides here -->
+  </div>
+
   </main>
+  
+  <script>
+    // JavaScript for carousel functionality
+    var currentSlideIndex = 0;
+    var propertySlides = document.querySelectorAll('.property-slide');
+
+    function showSlide(index) {
+        propertySlides.forEach(function(slide) {
+            slide.style.display = 'none';
+        });
+
+        propertySlides[index].style.display = 'block';
+    }
+
+    function nextSlide() {
+        currentSlideIndex++;
+        if (currentSlideIndex >= propertySlides.length) {
+            currentSlideIndex = 0;
+        }
+        showSlide(currentSlideIndex);
+    }
+
+    // Auto-advance the carousel every 5 seconds
+    setInterval(nextSlide, 5000);
+</script>
     <footer class="footer mt-auto py-2 fixed-bottom" style="background-color:rgb(52,58,64)">
         <%- include partials/bottom_nav.ejs %>  
 
@@ -237,9 +321,3 @@ body {
     </footer>
 
 </html>
-
-
-
-
-
-

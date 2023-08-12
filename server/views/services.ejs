@@ -6,6 +6,134 @@
         <%- include partials/main_nav %>
     </header>
 	</head>
+    <style>
+        /* Sample CSS for illustration purposes. Customize as needed */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9e6e6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #5e81b9;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .service {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service h2 {
+            color: #336699;
+        }
+
+        .service p {
+            color: #666;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .footer{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+        <p>Explore the services we offer to help you find your dream home!</p>
+    </header>
+
+    <main>
+        <div class="service">
+            <h2>Property Listings</h2>
+            <p>Discover a wide range of property listings, including houses, apartments, condos, and more. Our listings are regularly updated and thoroughly verified to ensure you get the most accurate information.</p>
+        </div>
+
+        <div class="service">
+            <h2>Advanced Search</h2>
+            <p>Utilize our advanced search features to filter properties based on your preferences. Whether you're looking for a specific location, price range, or property type, our search tools will help you find the perfect match.</p>
+        </div>
+
+        <div class="service">
+            <h2>Real Estate Agents</h2>
+            <p>Connect with experienced real estate agents who are experts in their local markets. Our agents will guide you through the buying or selling process and provide valuable insights to make informed decisions.</p>
+        </div>
+
+        <div class="service">
+            <h2>Home Valuation</h2>
+            <p>Get an accurate estimate of your property's value with our home valuation service. Our algorithm considers various factors to determine a fair market value for your property.</p>
+        </div>
+
+        <div class="image-container">
+            <img src="https://www.qazzoo.com/wp-content/uploads/2020/02/shutterstock_402629233-scaled.jpg" alt="Service Image 1">
+            <img src="https://th.bing.com/th/id/OIP.6p1biJVtaLP6uUaRmJKwFQHaE7?pid=ImgDet&rs=1" alt="Service Image 2">
+            <!-- Add more images here -->
+        </div>
+
+        <!-- Add more services and images as needed -->
+
+    </main>
+
+    <script>
+        // Sample JavaScript for illustration purposes. Customize as needed.
+        const serviceSections = document.querySelectorAll('.service');
+
+        // Add a hover effect to service sections
+        serviceSections.forEach((section) => {
+            section.addEventListener('mouseenter', () => {
+                section.style.transform = 'scale(1.05)';
+                section.style.transition = 'transform 0.3s ease';
+            });
+
+            section.addEventListener('mouseleave', () => {
+                section.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+
+  
 
 <footer class="footer mt-auto py-2 fixed-bottom" style="background-color:rgb(52,58,64)">
 	<%- include partials/bottom_nav.ejs %>  
